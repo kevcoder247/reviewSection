@@ -39,7 +39,6 @@ const reviews = [
 ];
 
 //Select items
-
 const img = document.getElementById('person-img');
 const author = document.getElementById('author');
 const job = document.getElementById('job');
@@ -81,6 +80,11 @@ prevBtn.addEventListener('click', function(){
   if(currentItem < 0){
     currentItem = reviews.length - 1;
   }
-
   showPerson(currentItem);
+})
+
+//Show a random person
+randomBtn.addEventListener('click', function(){
+  const randomPerson = Math.floor(Math.random() * reviews.length);
+  showPerson(randomPerson);
 })
